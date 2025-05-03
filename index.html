@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrobid</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4285F4',
+            'primary-dark': '#3367D6',
+            secondary: '#DB4437'
+          },
+          fontFamily: {
+            sans: ['Roboto', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm fixed w-full z-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="text-xl font-medium text-primary">Agrobid</a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#features" class="text-gray-700 hover:text-primary transition">Features</a>
+          <a href="#how-it-works" class="text-gray-700 hover:text-primary transition">How It Works</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-primary transition">Testimonials</a>
+          <a href="#waitlist" class="text-gray-700 hover:text-primary transition">Join Waitlist</a>
+        </div>
+        <button class="md:hidden" id="menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden" id="menu">
+      <div class="px-6 pt-2 pb-4 space-y-1">
+        <a href="#features" class="block text-gray-700 hover:text-primary transition">Features</a>
+        <a href="#how-it-works" class="block text-gray-700 hover:text-primary transition">How It Works</a>
+        <a href="#testimonials" class="block text-gray-700 hover:text-primary transition">Testimonials</a>
+        <a href="#waitlist" class="block text-gray-700 hover:text-primary transition">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-screen" style="background-image:url('https://picsum.photos/id/1016/1600/900');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-2xl">Bid Live in India’s Agri‑Markets from Anywhere</h1>
+      <p class="mt-4 text-base sm:text-lg md:text-xl text-white max-w-xl">Seamless access to real‑time auctions with multi‑language captions, straight from the mandi.</p>
+      <a href="#waitlist" class="mt-8 inline-block px-8 py-3 bg-primary text-white font-medium rounded-md shadow-md hover:bg-primary-dark transition">Join the Waitlist</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center text-gray-900">Key Features</h2>
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+          <img src="https://img.icons8.com/ios-filled/96/4285F4/video-call.png" alt="Live Streaming" class="w-12 h-12">
+          <h3 class="mt-4 text-lg font-medium text-gray-800">Live Streaming</h3>
+          <p class="mt-2 text-sm text-gray-600">Watch auctions live with sub‑second latency via our on‑site reps.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+          <img src="https://img.icons8.com/ios-filled/96/4285F4/handshake.png" alt="Real-Time Bidding" class="w-12 h-12">
+          <h3 class="mt-4 text-lg font-medium text-gray-800">Real-Time Bidding</h3>
+          <p class="mt-2 text-sm text-gray-600">Place and update bids instantly with our WebSocket‑powered engine.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+          <img src="https://img.icons8.com/ios-filled/96/4285F4/closed-captioning.png" alt="Multi-Language Captions" class="w-12 h-12">
+          <h3 class="mt-4 text-lg font-medium text-gray-800">Multi-Language Captions</h3>
+          <p class="mt-2 text-sm text-gray-600">Real‑time speech‑to‑text and translation in your preferred language.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md">
+          <img src="https://img.icons8.com/ios-filled/96/4285F4/combo-chart.png" alt="Insights & Analytics" class="w-12 h-12">
+          <h3 class="mt-4 text-lg font-medium text-gray-800">Insights & Analytics</h3>
+          <p class="mt-2 text-sm text-gray-600">Monitor bid volumes, latency, and market trends on interactive dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center text-gray-900">How It Works</h2>
+      <div class="mt-10 space-y-6">
+        <div class="flex items-start space-x-4">
+          <img src="https://img.icons8.com/ios-filled/80/4285F4/add-user-male.png" alt="Sign Up" class="w-10 h-10 flex-shrink-0">
+          <p class="text-gray-700"><strong>Sign Up:</strong> Register as an importer and complete KYC digitally in minutes.</p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <img src="https://img.icons8.com/ios-filled/80/4285F4/search.png" alt="Browse Auctions" class="w-10 h-10 flex-shrink-0">
+          <p class="text-gray-700"><strong>Browse Auctions:</strong> Filter by commodity, region, or time slot.</p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <img src="https://img.icons8.com/ios-filled/80/4285F4/video.png" alt="Watch Live" class="w-10 h-10 flex-shrink-0">
+          <p class="text-gray-700"><strong>Watch Live:</strong> Select a session and view real‑time video with captions.</p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <img src="https://img.icons8.com/ios-filled/80/4285F4/money-bag.png" alt="Bid Instantly" class="w-10 h-10 flex-shrink-0">
+          <p class="text-gray-700"><strong>Bid Instantly:</strong> Enter your bid and confirm—see updates in milliseconds.</p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <img src="https://img.icons8.com/ios-filled/80/4285F4/checked--v1.png" alt="Win & Settle" class="w-10 h-10 flex-shrink-0">
+          <p class="text-gray-700"><strong>Win & Settle:</strong> Receive instant invoice and coordinate delivery seamlessly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold text-gray-900">What Our Users Say</h2>
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John" class="mx-auto rounded-full w-24 h-24">
+          <p class="mt-4 italic text-gray-700">"Joining a remote mandi auction was a game-changer—I closed deals without leaving my city!"</p>
+          <p class="mt-2 font-medium text-gray-900">— John, Importer</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Latha" class="mx-auto rounded-full w-24 h-24">
+          <p class="mt-4 italic text-gray-700">"The live captions in English helped me follow Marathi auctions perfectly."</p>
+          <p class="mt-2 font-medium text-gray-900">— Latha, Importer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist / CTA -->
+  <section id="waitlist" class="py-20 bg-primary-dark text-white text-center">
+    <div class="max-w-md mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-semibold">Be the First to Bid Live</h2>
+      <p class="mt-4 text-sm md:text-base">Enter your email to join the waitlist and get early access.</p>
+      <p class="mt-2 text-xs text-gray-200">Note: This form requires HTTP/HTTPS. For local testing, serve via a web server (e.g., <code>python -m http.server</code>).</p>
+      <!-- Formsubmit integration -->
+      <form action="https://formsubmit.co/nvp159@gmail.com" method="POST" class="mt-6 flex flex-col sm:flex-row gap-4">
+        <!-- Disable captcha -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New Agrobid Waitlist Signup">
+        <!-- Success redirect URL -->
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <input type="email" name="email" placeholder="Your email address" required class="w-full p-3 rounded-md bg-white text-gray-800 placeholder-gray-500" />
+        <button type="submit" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Join Waitlist</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-gray-400">
+      <p class="text-sm">© 2025 Agrobid. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a href="#" class="text-sm hover:text-white transition">Privacy Policy</a>
+        <a href="#" class="text-sm hover:text-white transition">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+<!-- Fallback for local file testing: mailto if served as file:// -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waitlistForm = document.querySelector('form[action="https://formsubmit.co/nvp159@gmail.com"]');
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', function(e) {
+        if (location.protocol === 'file:') {
+          e.preventDefault();
+          const emailInput = waitlistForm.querySelector('input[name="email"]');
+          const email = encodeURIComponent(emailInput.value);
+          const subject = encodeURIComponent('New Agrobid Waitlist Signup');
+          const body = encodeURIComponent('Please add ' + email + ' to the waitlist.');
+          window.location.href = `mailto:nvp159@gmail.com?subject=${subject}&body=${body}`;
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>
